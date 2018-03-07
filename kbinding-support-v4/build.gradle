@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+//apply from: 'https://raw.githubusercontent.com/HomHomLin/Gradle-Publish/master/bintray.gradle'
+android {
+    compileSdkVersion rootProject.ext.android_const.compileSdk
+    compileOptions.encoding = "UTF-8"
+    defaultConfig {
+        minSdkVersion rootProject.ext.android_const.minSdk
+        targetSdkVersion rootProject.ext.android_const.targetSdk
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compileOnly project(':kbinding')
+    compileOnly project(':kbinding-annotations')
+    compileOnly rootProject.ext.app_dep.rxjava2, rootProject.ext.withoutStuff
+    compileOnly rootProject.ext.app_dep.rxandroid, rootProject.ext.withoutStuff
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compileOnly "org.jetbrains.anko:anko-common:$rootProject.ext.android_const.anko_version", rootProject.ext.withoutStuff
+    compileOnly rootProject.ext.app_dep.support_v4
+    compileOnly rootProject.ext.app_dep.rxbinding2_support_v4, rootProject.ext.withoutStuff
+}
+////task to delete the old jar
+//task deleteOldJar(type: Delete) {
+//    delete 'release/AndroidPlugin.jar'
+//}
+//
+////task to export contents as jar
+//task exportJar(type: Copy) {
+//    from('build/intermediates/bundles/release/')
+//    into('release/')
+//    include('classes.jar')
+//    ///Rename the jar
+//    rename('classes.jar', 'AndroidPlugin.jar')
+//}
+//
+//exportJar.dependsOn(deleteOldJar, build)

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/KbindingRxjava2.iml" filepath="$PROJECT_DIR$/KbindingRxjava2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/autoadapter/autoadapter.iml" filepath="$PROJECT_DIR$/autoadapter/autoadapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kbinding/kbinding.iml" filepath="$PROJECT_DIR$/kbinding/kbinding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kbinding-adapterview/kbinding-adapterview.iml" filepath="$PROJECT_DIR$/kbinding-adapterview/kbinding-adapterview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kbinding-annotations/kbinding-annotations.iml" filepath="$PROJECT_DIR$/kbinding-annotations/kbinding-annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kbinding-common/kbinding-common.iml" filepath="$PROJECT_DIR$/kbinding-common/kbinding-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kbinding-compiler/kbinding-compiler.iml" filepath="$PROJECT_DIR$/kbinding-compiler/kbinding-compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kbinding-support-v4/kbinding-support-v4.iml" filepath="$PROJECT_DIR$/kbinding-support-v4/kbinding-support-v4.iml" />
+    </modules>
+  </component>
+</project>

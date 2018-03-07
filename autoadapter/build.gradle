@@ -1,0 +1,43 @@
+apply plugin: 'com.android.library'
+//apply from: 'https://raw.githubusercontent.com/HomHomLin/Gradle-Publish/master/bintray.gradle'
+android {
+    compileSdkVersion rootProject.ext.android_const.compileSdk
+    compileOptions.encoding = "UTF-8"
+    defaultConfig {
+        minSdkVersion rootProject.ext.android_const.minSdk
+        targetSdkVersion rootProject.ext.android_const.targetSdk
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compileOnly rootProject.ext.app_dep.support_v4
+    compileOnly rootProject.ext.app_dep.recyclerview_v7
+}
+////task to delete the old jar
+//task deleteOldJar(type: Delete) {
+//    delete 'release/AndroidPlugin.jar'
+//}
+//
+////task to export contents as jar
+//task exportJar(type: Copy) {
+//    from('build/intermediates/bundles/release/')
+//    into('release/')
+//    include('classes.jar')
+//    ///Rename the jar
+//    rename('classes.jar', 'AndroidPlugin.jar')
+//}
+//
+//exportJar.dependsOn(deleteOldJar, build)

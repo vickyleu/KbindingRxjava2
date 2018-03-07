@@ -1,0 +1,8 @@
+//include ':app'
+include ':kbinding'
+include ':autoadapter'
+include ':kbinding-adapterview'
+include ':kbinding-annotations'
+include ':kbinding-common'
+include ':kbinding-support-v4'
+include ':kbinding-compiler'
